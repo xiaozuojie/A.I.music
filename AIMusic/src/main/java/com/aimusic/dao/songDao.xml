@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aimusic.dao.userDao">
+	
+
+	<select id="getAllSong" resultMap="SongMap">
+		select * from song
+	</select>
+
+	<resultMap type="com.aimusic.entity.song" id="SongMap">
+		<id property="songId" column="songId" />
+		<result property="songName" column="songName" />
+		<result property="singerName" column="singerName" />
+        <result property="albumsName" column="albumsName" />
+        <result property="lyrics" column="lyrics" />
+		<result property="songImage" column="songImage" />
+        <result property="collection" column="collection" />
+	</resultMap>
+</mapper>
